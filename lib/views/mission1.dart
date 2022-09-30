@@ -169,7 +169,7 @@ class _CounterPageState extends State<CounterPage> {
       ),
 
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(top: 100.0),
+        padding: const EdgeInsets.only(top: 100),
         child: FloatingActionButton(
           onPressed: () {
             setState(() {
