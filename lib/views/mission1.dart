@@ -1,13 +1,14 @@
 part of 'pages.dart';
 
-class CounterPage extends StatefulWidget {
-  const CounterPage({super.key});
+class Mission1 extends StatefulWidget {
+  const Mission1({super.key});
+  static const String routename = '/';
 
   @override
-  State<CounterPage> createState() => _CounterPageState();
+  State<Mission1> createState() => _Mission1State();
 }
 
-class _CounterPageState extends State<CounterPage> {
+class _Mission1State extends State<Mission1> {
   IconData icon = Icons.favorite_border;
 
   @override
@@ -41,6 +42,7 @@ class _CounterPageState extends State<CounterPage> {
                 ),
                 fit: BoxFit.fill
               ),
+              
             ),
             const SizedBox(height:10),
 
@@ -164,6 +166,17 @@ class _CounterPageState extends State<CounterPage> {
                 ]
               ),
             ),
+            SizedBox(height: 26),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
+              onPressed: (){
+                Navigator.push(
+                  context,MaterialPageRoute
+                  (builder: (context) => Order())
+                  );
+              },
+              child: Text('Order Now'),
+              ),
           ],
         ),
       ),
@@ -185,6 +198,7 @@ class _CounterPageState extends State<CounterPage> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+      
     );
   }
 }
